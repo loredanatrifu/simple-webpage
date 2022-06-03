@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% if heroes %}
+    <h1>Your search results:</h1>
+    <table class="search" style="font-size: 25px;" >
+        {% for k,v in heroes.items() %}
+    <tr>
+        <td><a href="/hero/{{k}}" style="size: 80px;">{{v}}</a></td>
+        {% endfor %}
+    </tr>
+    </table>
+{% else %}
+<h1>There is no Avenger with that name!</h1>
+{% endif %}
+
+<br>
+<a href="/avengers/" style="font-size:20px">Back to Heroes</a>
+
+{% endblock content %}
