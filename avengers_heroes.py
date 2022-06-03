@@ -56,11 +56,22 @@ def show_hero(hero_id):
     return render_template('hero.html', hero=record)
 
 
-@app.route('/contact/')
-def contact():
-    """Shows the contact information and contain a form for sending message"""
+@app.route('/movies/')
+def show_gallery():
+    """Shows the avengers heroes pictures"""
 
-    return render_template('contact.html')
+    with conn:
+        query = """
+               select
+                   m.id, m.movie_name, m.launching_year, m.images
+                   from movies m;
+           """
+
+        c = conn.cursor()
+        c.execute(query)
+        records = c.fetchall()
+        # print(records)
+    return render_template('movies.html', movies=records)
 
 
 @app.route('/search/', methods=['GET', 'POST'])
@@ -93,10 +104,17 @@ def search():
         return render_template('search.html', heroes=temp_hero)
 
 
+@app.route('/contact/')
+def contact():
+    """Shows the contact information and contain a form for sending message"""
+
+    return render_template('contact.html')
+
+
 @app.errorhandler(404)
 def page_not_found(r):
     """For catching routes errors"""
-    return render_template('catch_error.html'), 404
+    return render_template('catch_error.html'), 404, r
 
 
 if __name__ == '__main__':
