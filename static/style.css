@@ -110,6 +110,26 @@ h1 {
     display: block;
 }
 
+#movie {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    display: block;
+}
+
+.movies {
+    color: white;
+     padding: 10px;
+    border:2px solid #dadada;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: top;
+    border: 2px solid #E6FF83;
+    backdrop-filter: blur(60px);
+    background-size: 340px;
+    margin: auto;
+}
+
 #error {
     font-size: 30px;
     color: red;
@@ -142,4 +162,16 @@ ul {
     width: 620px;
     display: block;
     margin: auto;
+}
+
+.topnav {
+    float: right;
+    color: white;
+    text-align: center;
+    display: inline;
+}
+
+#movie_h {
+    display: center;
+    font-size: 40px;
 }
