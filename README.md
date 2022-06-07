@@ -6,7 +6,7 @@ Nume: Trifu Loredana
 
 Proiect: Visualize Avengers Heroes Data este o pagina web simpla care afiseaza eroii din Avengers, detalii despre fiecare erou care pot fi accesate prin adresa URL cu ID erou si prin cautare in formularul search din pagina. Codul si tehnologiile utilizate sunt descrise mai jos.
 
-Tehnologiile utilizate sunt: Python/Flask, HTML, JavaScript, CSS, Postgresql.
+Tehnologiile utilizate sunt: Python/Flask, HTML, JavaScript, CSS, PostgreSQL.
 
 Pasii urmati pentru crearea paginii web:
 Am creat tabelele in baza de date utilizand PostgreSQL cu id primary key si constraints pentru ca id-ul sa fie unic, sa fie numar si sa se genereze automat. De asemenea, prin foreign_key am creat o legatura intre cele doua tabele. 
